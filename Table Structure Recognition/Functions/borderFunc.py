@@ -43,7 +43,9 @@ def extract_table(table_body,__line__,lines=None):
                 k += 1
                 x, y = line_intersection(x1, y1, x2, y2, x3, y3, x4, y4)
                 point.append([x, y])
-            except:
+            except  Exception as e:
+                print("Exception occured")
+                print(str(e))
                 continue
         points.append(point)
 
@@ -60,8 +62,13 @@ def extract_table(table_body,__line__,lines=None):
     lastCache = []
     ## creating bounding boxes of cells from the points detected 
     ## This is still under work and might fail on some images
+    print("Enumerating points...")
+    print(len(points))
     for i, row in enumerate(points):
         limitj = len(row)
+        print("i, row")
+        print(i)
+        print(row)
         currentVala = []
         for j, col in enumerate(row):
 
