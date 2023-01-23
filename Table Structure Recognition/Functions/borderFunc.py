@@ -66,9 +66,9 @@ def extract_table(table_body,__line__,lines=None):
     print(len(points))
     for i, row in enumerate(points):
         limitj = len(row)
-        print("i, row")
-        print(i)
-        print(row)
+        #print("i, row")
+        #print(i)
+        #print(row)
         currentVala = []
         for j, col in enumerate(row):
 
@@ -116,6 +116,7 @@ def extract_table(table_body,__line__,lines=None):
         if(i!=0):
             lastCache = currentVala
 
+    print("out")
                 
     ## Visualizing the cells ##
     # count = 1
